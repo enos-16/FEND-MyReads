@@ -44,7 +44,11 @@ class BookCase extends React.Component {
             <div>
               {shelves &&
                 shelves.map(shelf => (
-                  <BookShelf key={shelf.name} shelf={shelf} />
+                  <BookShelf
+                    key={shelf.name}
+                    shelf={shelf}
+                    onChangeShelf={this.props.onChangeShelf}
+                  />
                 ))}
             </div>
           </div>
